@@ -1,0 +1,83 @@
+$square_size: 15px;
+$squaremargin: 5px;
+$delayenter: 0.3s;
+$topenter: -10px;
+$colours: ( 1: #4cc9c9, 2: #ffcf01, 3: #e58720, 
+    4: #b7d82e, 5: #d6c2ad, 6: #937963, 7: #aa65a5,
+    8: #aa65a5, 9: #4cc9c9, 10: #e58720, 11: #b7d82e,
+    12: #e58720, 13: #ffcf01, 14: #aa65a5, 15: #e81e26,
+);
+
+.square {
+    background: #e81e26;
+    width: $square_size;
+    height: $square_size;
+    float: left;
+    top: $topenter;
+    margin-right: $squaremargin;
+    margin-top: $squaremargin;
+    position: relative;
+    opacity: 0;
+    -webkit-animation: enter 6s infinite;
+    animation: enter 10s infinite;
+}
+
+.enter {
+    top: 0px;
+    opacity: 1;
+}
+
+.clear {
+    clear: both;
+}
+
+.last {
+   margin-right: 0;
+}
+
+@mixin transition($value) {
+    -webkit-transition: $value;
+}
+
+@mixin delay($delay) {
+  -webkit-animation-delay: $delay;
+}
+
+@-webkit-keyframes enter {
+    0% { 
+        opacity: 0;
+        top: $topenter;
+    }
+
+    5% { 
+        opacity: 1;
+        top: 0px;
+    }
+
+    50.9% { 
+        opacity: 1;
+        top: 0px;
+    }
+
+    55.9% { 
+        opacity: 0;
+        top: - $topenter;
+    }
+}
+
+@mixin squares($nr-of-squares) {
+    $count-down: $nr-of-squares;
+
+    @for $i from 0 through $nr-of-squares {
+
+        .square:nth-child(#{$i}){
+            @include delay($count-down * $delayenter);
+            background: map-get($colours, $count-down);
+        }
+
+        $count-down: $count-down - 1;
+    }
+}
+
+@include squares(16);
+

@@ -1,0 +1,40 @@
+
+// ----------- Overlay for loading ----------
+
+.overlay {
+    background: black;
+    display: flex;
+    font-family: arial;
+    height: 100%;
+    left: 0;
+    opacity: .9;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    align-items: center;
+
+    &__content {
+        margin: -50px auto 0;
+    }
+
+    .loader {
+        display: inline-block;
+    }
+
+    h1 {
+        color: white;
+        display: inline-block;
+        font-size: 50px;
+        line-height: 70px;
+        margin-left: 20px;
+        text-align: center;
+    }
+
+    p {
+        color: white;
+        text-align: right;
+    }
+
+}

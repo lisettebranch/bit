@@ -1,0 +1,25 @@
+
+// --------------- Header ---------------------
+
+.header {
+	background: white;
+	border-bottom: 2px solid #289a9a;
+	height: 50px;
+	line-height: 50px;
+	padding: 0 10px;
+
+	img {
+		display: inline-block;
+		height: 30px;
+		margin: -8px 5px 0 0;
+		vertical-align: middle;
+		width: 30px;
+	}
+
+	h1 {
+		color: black;
+		display: inline-block;
+		font-family: arial;
+		font-size: 1.3rem;
+	}
+}

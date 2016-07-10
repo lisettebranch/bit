@@ -1,0 +1,82 @@
+
+// --------------------------------------------------------//
+//                      DataTables                         //
+//                                                         //
+//           Overwrite default styling of DataTables       //
+// --------------------------------------------------------//
+
+.dataTables {
+
+    // ---------------- Search bar -----------------
+
+    &_filter {
+        padding: 0 15px 0 20px;
+        width: 100%;
+
+        input {
+            background: none;
+            border: 0;
+            color: white !important;
+            font-size: 18px;
+            height: 40px;
+            line-height: 40px;
+            min-width: 100%;
+            padding: 0 0 0 10px;
+            width: 100% !important;
+
+            &::-webkit-input-placeholder {
+                color: white;
+                opacity: .8;
+            }
+
+        }
+    }
+
+    // ----------------- Pagination ----------------
+
+    &_paginate {
+        font-family: arial;
+        margin: 10px 10px 0 0;
+
+        .paginate_button {
+            background: none;
+            border-radius: 0 !important;
+            border: 0 !important;
+            color: white !important;
+            font-weight: bold;
+
+            &:hover {
+                background:  none !important;
+                border: 0 !important;
+            }
+
+            &.current {
+                background: #289a9a !important;
+            }
+
+            &.next,
+            &.previous {
+                color:  #289a9a;
+                background: none !important;
+            }
+
+            &.disabled {
+                display: none;
+            }
+        }
+    }
+}
+
+// -------------------- Table ---------------------
+
+table {
+    font-family: arial;
+
+    thead {
+        background: #289a9a;
+        color: white;
+        font-weight: thin;
+        text-align: left;
+
+    }
+}
